@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tableView_Autolayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="135" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sEq-bP-oLu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tabCell" rowHeight="135" id="t7g-1j-hvC" customClass="tabCellTableViewCell" customModule="tableView_Autolayout" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t7g-1j-hvC" id="NVZ-07-duL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="134.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is test label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REJ-So-644">
+                                                    <rect key="frame" x="20" y="20" width="335" height="94.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="REJ-So-644" secondAttribute="trailing" constant="20" id="4KI-Ux-6QS"/>
+                                                <constraint firstItem="REJ-So-644" firstAttribute="leading" secondItem="NVZ-07-duL" secondAttribute="leading" constant="20" id="7Bf-F6-XiS"/>
+                                                <constraint firstAttribute="bottom" secondItem="REJ-So-644" secondAttribute="bottom" constant="20" id="7Qb-83-FFA"/>
+                                                <constraint firstItem="REJ-So-644" firstAttribute="top" secondItem="NVZ-07-duL" secondAttribute="top" constant="20" id="f5G-UW-aW5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLbl" destination="REJ-So-644" id="w4j-Pi-hgA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Gia-CQ-7Dq"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="36D-YG-yTb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sEq-bP-oLu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Nxa-eE-6XR"/>
+                            <constraint firstItem="sEq-bP-oLu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rb6-WY-7Ak"/>
+                            <constraint firstAttribute="trailing" secondItem="sEq-bP-oLu" secondAttribute="trailing" id="lWp-Ja-3tH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sEq-bP-oLu" secondAttribute="bottom" id="laF-eV-ban"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tabel" destination="sEq-bP-oLu" id="nKm-f9-OSl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="69.715142428785612"/>
+        </scene>
+    </scenes>
+</document>
